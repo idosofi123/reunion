@@ -1,0 +1,57 @@
+@use "./_shared.scss" as shared;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'OxaniumV';
+  src: url(./assets/fonts/Oxanium.ttf) format('truetype');
+  font-weight: 200 800;
+}
+
+body {
+  margin: 0;
+  font-family: 'OxaniumV', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(170,245,248,1) 0%, rgba(248,162,239,0.8) 90% );
+  height: 100dvh;
+}
+
+.App {
+  text-align: center;
+  color: shared.$primary-text-color;
+  height: 100%;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#root {
+  height: 100%;
+}
+
+// Element resets
+div {
+  box-sizing: border-box;
+}
+
+input {
+  all: unset;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
